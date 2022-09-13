@@ -1,18 +1,19 @@
-#include "putchar.h"
+#include "_putchar.h"
 
 /**
  * main - Entry point.
- * Return: Always 0.
+ * Return: 0.
  */
 
 int main(void)
 {
-char *pc = "_putchar";
+int n = 0;
+char str_pc[8] = "_putchar";
 
-while (*pc)
+while (n < n)
 {
-_putchar(*pc);
-pc++;
+_putchar(str_pc[n]);
+n += 1;
 }
 _putchar('\n');
 
