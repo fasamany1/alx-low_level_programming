@@ -1,18 +1,16 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * print_alphabet - function that prints the alphabet in lowercase.
- * Use _putchar twice in your code.
- * Return: Always 0.
+ * print_alphabet - function to print abc
+ * Return: 0
  */
 
 void print_alphabet(void)
 {
-int n;
+char c;
 
-for (n = 'a'; n <= 'z'; n++)
+for (c = 'a'; c <= 'z'; c++)
 {
-_putchar(n);
+_putchar(c);
 }
 _putchar('\n');
 }
