@@ -2,25 +2,28 @@
 
 /**
  * print_square - print a square, followed by a new line
- * @size: size of square
- * Return: nothing.
+ * @size: size of both width and length
+ * Return: a square made of '#'
  */
 
 void print_square(int size)
 {
-int col, row;
+int co, ro;
 
-if (size > 0)
+if (size <= 0)
 {
-for (row = 0; row < size; row++)
-{
-for (col = 0; col < size; col++)
-{
-putchar(35);
-}
 _putchar('\n');
-}
 }
 else
+{
+for (co = 1; co <= size; co++)
+{
+_putchar('#');
+for (ro = 2; ro <= size; ro++)
+{
+_putchar('#');
+}
 _putchar('\n');
+}
+}
 }
