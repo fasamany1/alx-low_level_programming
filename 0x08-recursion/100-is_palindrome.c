@@ -40,7 +40,6 @@ return (0);
 
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not
-
  * @s: char
  * Return: the integer length
  */
