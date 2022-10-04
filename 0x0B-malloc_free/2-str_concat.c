@@ -1,56 +1,54 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-/**
- *_strlen - counts and returns string length
- * @s: that's the string
- *
- * Return: the length
- */
-int _strlen(char *s)
-{
-int counter = 0;
+#include <stdio.h>
 
-if (!*s)
-	return (0);
-while (*s)
-{
-	counter++;
-	s++;
-}
-return (counter);
-}
 /**
- * str_concat - concatenates two strings
- * @s1: one string
- * @s2: the other
- * Return: pointer to cat string
+ * str_concat - concatenates two strings.
+ *
+ * @s1: char pointer
+ *
+ * @s2: char pointer
+ *
+ *  Return: strTemp
  */
+
 char *str_concat(char *s1, char *s2)
 {
-	char *new;
-	unsigned int i;
-	unsigned int j;
-	int total = 0;
+	int counter1, counter2, i, j;
+	char *strTemp;
 
-	if (!s1)
+	counter1 = 0;
+	counter2 = 0;
+
+	if (s1 == NULL)
+	{
 		s1 = "";
-	if (!s2)
+	}
+	if (s2 == NULL)
+	{
 		s2 = "";
-	total += _strlen(s1) + _strlen(s2);
-	new = malloc((total * sizeof(char)) + 1);
-	if (new == NULL)
-	{
-		return (NULL);
 	}
-	for (i = 0; s1[i]; i++)
+	while (s1[counter1] != '\0')
 	{
-		new[i] = s1[i];
+		counter1++;
 	}
-	for (j = 0; s2[j]; j++, i++)
+	while (s2[counter2] != '\0')
 	{
-		new[i] = s2[j];
+		counter2++;
+	}
+	counter2++;
+	strTemp = malloc(sizeof(char) * (counter1 + counter2));
+	if (strTemp == NULL)
 	{
-	new[i] = '\0';
-	return (new);
+	return (NULL);
+	}
+	for (i = 0; i < counter1; i++)
+	{
+		strTemp[i] =  s1[i];
+	}
+	for (j = 0; j < counter2; j++)
+	{
+		strTemp[i + j] = s2[j];
+	}
+	return (strTemp);
 }
