@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * malloc_checked - allocate dynamic memory using malloc
  * @b: the number of bytes to allocate
@@ -10,9 +10,12 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p = malloc(b);
+	void *ptr;
 
-	if (p)
-		return (p);
-	exit(98);
+	ptr = malloc(b);
+
+	if (ptr == NULL)
+		exit(98);
+
+	return (ptr);
 }
