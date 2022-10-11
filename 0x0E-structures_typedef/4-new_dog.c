@@ -1,52 +1,79 @@
-#include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "dog.h"
+
 /**
- * new_dog -  creates a new dog.
+ * _strlen - return length of a string
+ * @s: char type
+ * Return:  length of string
+ */
+
+int _strlen(char *s)
+{
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+
+	}
+	return (a);
+}
+/**
+ * _strcpy - function to copy string from source to destination
+ *@dest: pointer to destinatioin of string to be copied
+ *@src: pointer to source of string to be copied
+ * Return: return the value at dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int a;
+
+	for (a = 0; src[a] != '\0'; a++)
+	{
+		dest[a] = src[a];
+	}
+	dest[a] = '\0';
+	return (dest);
+}
+/**
+ * *new_dog - function to create new dog struct
  * @name: char type
  * @age: float type
  * @owner: char type
- * Return: Pointer to struct
+ * Return: Always success
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog;
-	int length1, length2, i, j;
+	dog_t *newd;
 
-	length1 = 0, length2 = 0;
-	newDog = malloc(sizeof(struct dog));
-
-	if (newDog == NULL)
+	newd = malloc(sizeof(struct dog));
+	if (newd == NULL)
 		return (NULL);
 
-	while (name[length1++])
-		;
-	while (owner[length2++])
-		;
-
-	newDog->name = malloc(sizeof(newDog->name) * length1);
-
-	if (newDog->name == NULL)
+	if (name == NULL)
 	{
-		free(newDog);
+		free(newd);
 		return (NULL);
 	}
+	newd->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (newd->name == NULL)
+		return (NULL);
+	_strcpy(newd->name, name);
 
-	for (i = 0; i < length1; i++)
-		newDog->name[i] = name[i];
+	newd->age = age;
 
-	newDog->age = age;
-
-	newDog->owner = malloc(sizeof(newDog->owner) * length2);
-
-	if (newDog->owner == NULL)
+	if (owner == NULL)
 	{
-		free(newDog->name);
-		free(newDog);
+		free(newd->owner);
+		free(newd);
 		return (NULL);
 	}
-	for (j = 0; j < length2; j++)
-		newDog->owner[j] = owner[j];
+	newd->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (newd->owner == NULL)
+		return (NULL);
+	_strcpy(newd->owner, owner);
 
-	return (newDog);
+	return (newd);
 }
