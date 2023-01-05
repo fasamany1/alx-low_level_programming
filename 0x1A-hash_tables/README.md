@@ -150,9 +150,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 0-hash_table_create.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```0-hash_table_create.c```
   
 ### 1. djb2
 
@@ -208,9 +208,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 ```
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 1-djb2.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```1-djb2.c```
   
 ### 2. key -> index
 
@@ -265,9 +265,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 2-key_index.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```2-key_index.c```
   
 ### 3. >>> ht['betty'] = 'cool'
 
@@ -316,9 +316,9 @@ If you want to test for collisions, here are some strings that collide using the
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 3-hash_table_set.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```3-hash_table_set.c```
   
 ### 4. >>> ht['betty']
 
@@ -389,9 +389,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 4-hash_table_get.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```4-hash_table_get.c```
   
 ### 5. >>> print(ht)
 
@@ -441,9 +441,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 5-hash_table_print.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```5-hash_table_print.c```
   
 ### 6. >>> del ht
 
@@ -516,9 +516,9 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 6-hash_table_delete.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```6-hash_table_delete.c```
   
 ### 7. $ht['Betty'] = 'Cool'
 
@@ -638,6 +638,6 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 **Repo:**
 
-* GitHub repository: alx-low_level_programming
-* Directory: 0x1A-hash_tables
-* File: 100-sorted_hash_table.c
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x1A-hash_tables```
+* File: ```100-sorted_hash_table.c```
