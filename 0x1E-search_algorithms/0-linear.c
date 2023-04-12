@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - search for specific value within an array
+ * linear_search - search for specific value within an array of integers
  * by checking each element of the array in sequence
  *
  * @array: input array
@@ -12,17 +12,20 @@
 
 int linear_search(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	size_t x;
+
+	if (array == NULL) /* Check if array is NULL */
 	{
-		return (-1); /* Check if array is NULL*/
+		return (-1);
 	}
-	for (size_t i = 0; i < size; i++)
+
+	for (x = 0; x < size; x++)
 	{
-		printf("Comparing array[%ld] = %d with value %d\n", i, array[i], value);
-		if (array[i] == value)
+		printf("Value checked array[%li] = [%i]\n", x, array[x]);
+		if (array[x] == value)
 		{
-			return (i);  /* Return the index where value is located */
+			return (x); /* Return the index where value is located */
 		}
 	}
-	return (-1);  /* Value not found */
+	return (-1); /* Value not found */
 }
